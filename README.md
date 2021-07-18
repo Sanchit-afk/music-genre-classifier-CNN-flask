@@ -1,0 +1,1 @@
+This is a music genre classifer application with CNN 

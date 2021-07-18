@@ -1,0 +1,42 @@
+{% extends 'public/templates/base.html' %}
+
+{% block content %}
+
+<div id="basic-2" class="tabs">
+    <div class="container">
+      <a id="errormess"></a>
+
+        <div class="row">
+            <div class="col-lg-12" style="margin-bottom: 6rem;">
+              <a id="errormess">
+              
+
+                <h2>CHECK GENRE</h2>
+                <div class="p-heading p-large"> Click on the area and upload your music file to check genre of the music.</div>
+            </div> <!-- end of col -->
+        </div>
+        <div class="row">
+            <form action="/upload-song" method="POST" enctype="multipart/form-data" class="up-form">
+               
+               <input type="file" name='document' multiple="" class="up-input">
+               
+              <p class="up-p">Click on this area to upload muisc.</p>
+              <button type="submit" class="btn btn-sm btn-success" style="margin-left: 9rem; width: 30vh;">Check</button>
+
+            </form>
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of basic-2 -->
+<!-- end of File Upload -->
+
+{% endblock %}
+
+{% block js%}
+<script>
+    $(document).ready(function(){
+        $('.up-input').change(function () {
+            $('.up-p').text(this.files.length + " file(s) selected");
+        });
+    });
+</script>
+{%endblock%}

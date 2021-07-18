@@ -1,0 +1,201 @@
+{% extends 'public/templates/base.html' %}
+
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+
+    <!-- Preloader -->
+	<div class="spinner-wrapper">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!-- end of preloader -->
+
+
+
+{% block content %}
+    <!-- Header -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/fontawesome-all.css" rel="stylesheet">
+    <link href="static/css/swiper.css" rel="stylesheet">
+  	<link href="static/css/magnific-popup.css" rel="stylesheet">
+  	<link href="static/css/styles.css" rel="stylesheet">
+  	<link href="static/css/mystyle.css" rel="stylesheet">
+    <style>
+
+        .inner{
+            position:absolute;
+            height:50px;
+            line-height:50px;
+            font-size:50px;
+            text-transform:uppercase;
+            overflow:hidden;
+            display:inline-block;
+        }
+
+        .inner span{
+            animation:animate 15s ease infinite;
+            position:relative;
+            color:#00c9db;
+            }
+            @keyframes animate{
+            0%,100%{
+                top:0;
+            }
+            8%{
+                top:0px;
+            }  
+            10%{
+                top:-50px;
+            }
+            18%{
+                top:-50px;
+            }
+            20%{
+                top:-100px;
+            }
+            28%{
+                top:-100px;
+            }
+            30%{
+                top:-150px;
+            }
+            38%{
+                top:-150px;
+            }
+            40%{
+                top:-200px;
+            }
+            48%{
+                top:-200px;
+            }
+            50%{
+                top:-250px;
+            }
+            58%{
+                top:-250px;
+            }
+            60%{
+                top:-300px;
+            }
+            68%{
+                top:-300px;
+            }
+            70%{
+                top:-350px;
+            }
+            78%{
+                top:-350px;
+            }
+            90%{
+                top:-400px;
+            }
+            98%{
+                top:-400px;
+            }
+            100%{
+                top:-450px;
+            }
+            }
+    </style>
+    <header id="header" class="header">
+        <div class="header-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="text-container">
+                            <div class="outer">
+                                <h4>A music genre classification for &nbsp; 
+                                    <div class="inner">
+                                        <span>
+                                            METAL<br>
+                                            ROCK<br>
+                                            POP<br>
+                                            CLASSICAL<br>
+                                            JAZZ<br>
+                                            HIPHOP<br>
+                                            DISCO<br>
+                                            BLUES<br>
+                                            COUNTRY<br>
+                                            
+                                        </span>
+                                    </div>
+                            </div>
+                            <a class="btn-solid-lg page-scroll mt-4" href="#basic-2"><i class="fas fa-headphones"></i> GET STARTED</a>
+                        </div>				
+
+					<div class="col-lg-5">
+                        <div class="image-container">
+                           
+                        </div> <!-- end of image-container -->
+                    </div> <!-- end of col -->
+                </div> <!-- end of row -->
+            </div> <!-- end of container -->
+        </div> <!-- end of header-content -->
+    </header> <!-- end of header -->
+    <!-- end of header -->
+    <!-- File Upload -->
+
+    {% include 'public/check_genre.html' %}
+
+    <!-- Statistics -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <link href="static/css/fontawesome-all.css" rel="stylesheet">
+    <link href="static/css/swiper.css" rel="stylesheet">
+    <link href="static/css/magnific-popup.css" rel="stylesheet">
+    <link href="static/css/styles.css" rel="stylesheet">
+    <link href="static/css/mystyle.css" rel="stylesheet">
+    <div class="counter" id="statistics">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>STATISTICS</h2>
+            </div>
+        </div>
+        <div class="container" style="margin-top: 6rem;">
+            <div class="row">
+                <div class="col-lg-12">
+
+                    <!-- Counter -->
+                    <div id="counter">
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="1000"&nbsp>1</div>
+                           
+                            <p class="counter-info">Total Music</p>
+                        </div>
+
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="750">1</div>
+                            <p class="counter-info">Training Set</p>
+                        </div>
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="250">1</div>
+                            <p class="counter-info">Testing Set</p>
+                        </div>
+                        <div class="cell">
+                            <div class="counter-value number-count" data-count="82">1</div>
+                            <p class="counter-info">Accuracy (%)</p>
+                        </div>
+                    </div>
+                    <!-- end of counter -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of counter -->
+    <!-- end of statistics -->
+
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of form -->
+    <!-- end of contact -->
+
+{% endblock %}
+
+</body>
+
+</html>
